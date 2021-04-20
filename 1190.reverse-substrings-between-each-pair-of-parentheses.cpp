@@ -1,7 +1,7 @@
 /*
- * @lc app=leetcode id=850 lang=cpp
+ * @lc app=leetcode id=1190 lang=cpp
  *
- * [850] Rectangle Area II
+ * [1190] Reverse Substrings Between Each Pair of Parentheses
  */
 
 // @lc code=start
@@ -11,8 +11,7 @@ using namespace std;
 // Space Complexity:
 class Solution {
 public:
-    // 类似释放内存，ref cnt 为1才释放 线段数
-    int rectangleArea(vector<vector<int>>& rectangles) {
+    string reverseParentheses(string s) {
         
     }
 };

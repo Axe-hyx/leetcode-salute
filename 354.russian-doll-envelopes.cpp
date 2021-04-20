@@ -24,22 +24,22 @@ public:
            return false;
          });
     int ans = 0;
-    vector<vector<int>> dp;
+    vector<int> dp;
     int n = envelopes.size();
     for (int i = 0; i < n; ++i) {
         int l = 0, r = dp.size();
         while (l < r) {
             int mid = l + (r-l) / 2;
-            if (dp[mid][1] < envelopes[i][1]) {
+            if (envelopes[dp[mid]][1] < envelopes[i][1]) {
                 l = mid + 1;
             } else {
                 r = mid;
             }
         }
-        if (r == dp.size() || dp[r][1] < envelopes[i][1]) { // push
-          dp.push_back(envelopes[i]);
+        if (r == dp.size() || envelopes[dp[r]][1] < envelopes[i][1]) { // push
+          dp.push_back(i);
         } else { // overwrite
-          dp[r] = envelopes[i];
+            dp[r] = i;
         }
     }
     return dp.size();

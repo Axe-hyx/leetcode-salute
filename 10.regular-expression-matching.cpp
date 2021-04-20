@@ -6,6 +6,7 @@
 
 // @lc code=start
 #include <bits/stdc++.h>
+#include <doctest/doctest.h>
 using namespace std;
 // Time Complexity:
 // Space Complexity:

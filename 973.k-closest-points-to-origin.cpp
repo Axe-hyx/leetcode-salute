@@ -24,6 +24,8 @@ public:
     pos[j] = tmp;
   }
 
+  // 分类讨论{privot, n}, n > privot; n = privot; n < privot;
+  // 得到三种情况r的值，证明算法正确
   int kth(vector<Pos> &nums, int low, int high) {
     int pivot = nums[low].dist;
     int l = low, r = high + 1;
